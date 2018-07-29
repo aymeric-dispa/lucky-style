@@ -1,67 +1,89 @@
 <template>
-  <div id="presentation-details">
-    <div class="container" id="presentation">
-      <h4>Quentin, votre infirmier dans la région de Philippeville, Florennes et Couvin</h4>
-      <div class="row">
-
-        <div class="col-md-12">
-          <div><img src="../assets/quentin.jpg"
-                    class="img-thumbnail presentation-picture"/></div>
-          <p id="presentation-txt">
-            Bonjour,
-            Je m’appelle Quentin Dispa, je suis un infirmier de  27 ans, indépendant, souriant et à l'écoute, exerçant dans la région de <strong>Philippeville, Florennes et Couvin</strong>. <br/>
-            Mon expérience professionnelle compte <strong>sept années en structures hospitalières/maisons de repos à plein-temps</strong>, où je suis passé par tous les services de soins généraux en tant qu’intérimaire et/ou étudiant.<br/>
-
-            <br/>Dernièrement, j’ai travaillé trois ans en service d’hémodialyse à l’Hôpital Civil Marie Curie. Je possède un contact <strong>chaleureux</strong>
-            et <strong>bienveillant</strong> envers le patient.
-            <br/>Je dispose d’une <strong>expertise en diabétologie</strong>
-            m’octroyant un titre d’éducateur en diabétologie. Je suis moi-même atteint du diabète de type 1, je dispose donc d’une approche différente et d’une compréhension évidente face aux problèmes habituels rencontrés par le patient et son entourage.
-          </p><br/>
-
+  <div id="presentation-details" class="component-content">
+    <div id="presentation">
+      <div class="container">
+        <div class="row" id="a-propos">
+          <div class="col-md-5 ">
+            <div class="container d-flex h-100">
+              <!--<div class="row justify-content-center align-self-center" style="width: 100%; height: 100%">-->
+              <img src="../assets/dog-y.svg">
+            </div>
+          </div>
+          <!--</div>-->
+          <div class="col-md-7 text-md-left text-center">
+            <div class="col-md-11" id="a-propos-content">
+              <h2>À propos</h2>
+              <div class="justify">
+                <p>
+                  Je m'appelle Angélique.
+                  Amoureuse des animaux depuis mon plus jeune âge, j'ai appris à les aimer et à les respecter.
+                  Cependant, la vie faisant, il arrive que nous oublions nos rêves d'enfant...</p>
+                <p>
+                  … Mais pas tant que ça ! En 2013, je décide de prendre les choses en mains et je saisis l’opportunité de vivre enfin de ma passion.
+                  C’est alors que débute ma formation dans l'une des meilleures écoles de toilettage : “L'art Canin” situé à Hanzinne.
+                  Après avoir suivi cette formation agrémentée d'un stage régulier, j'obtiens mon diplôme avec succès et j'ouvre enfin mon propre salon de toilettage le 14 octobre 2014 à Couvin.
+                </p>
+                <p>
+                  J'ai le contact facile avec les animaux, avec qui je travaille toujours dans le calme, le respect et les besoins de chacun.
+                  J'adapte ma façon de travailler par rapport à l'âge, au caractère et surtout au vécu de votre chien ou votre chat.
+                  Mais je ne m'arrête pas là, puisque récemment j'ai ajouté à ma petite clientèle des poilus bien différents : lapins et cochons d'Inde à qui je coupe régulièrement les ongles.
+                  C'est donc avec plaisir que je vous recevrais, vous et votre compagnon à quatre pattes.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <br/><br/>
-    <info-table></info-table>
 
+    </div>
   </div>
 
 </template>
 
 <script>
-  import InfoTable from "./info-table";
   export default {
-    components: {
-      InfoTable
-    },
     name: 'about'
   }
 
 
 </script>
 <style scoped>
-  #presentation-details {
-    padding-bottom: 35px;
+
+  h2 {
+    text-transform: uppercase;
   }
 
-  #presentation-txt {
-    margin-top: 5px;
+  .class paragraph {
+    min-width: 50%;
   }
 
-  .presentation-picture {
-    float: left;
-    width: 300px;
-    shape-margin: 20px;
-    margin-right: 30px;
-    margin-bottom: 5px;
-    margin-top: 7px;
+  #presentation {
+    background-color: white;
+    color: #d455c4;
   }
 
-  @media screen and (max-width: 500px) {
-    .presentation-picture {
-      width: 100%;
+  #a-propos {
+    color: #c556e9;
+    height: 100%
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  #page-content h2 {
+    color: #545454;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and  (max-width: 768px) {
+
+    h2 {
+      margin-top: 20px;
     }
-  }
 
+  }
 
 </style>

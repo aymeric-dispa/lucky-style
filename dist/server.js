@@ -5,15 +5,21 @@ var history = require('connect-history-api-fallback');
 var connect = require('connect');
 var fs = require("fs");
 var bodyParser = require('body-parser');
-var config = require('./config.json');
 var app = express();
 app.use(bodyParser.json());
 
 
 //Mailgun config
-var domain = config.mailgunDomain;
-var apiKey = config.mailgunApiKey;
-var mailgun = require('mailgun-js')({apiKey: apiKey, domain: domain});
+var domain = process.env.MAILGUN_DOMAIN;
+var apiKey = process.env.MAILGUN_API_KEY;
+var mailgun;
+
+try {
+  mailgun = require('mailgun-js')({apiKey: apiKey, domain: domain});
+}
+catch (err) {
+  console.log('mailgun error : ' + err);
+}
 
 
 var port = process.env.PORT || 5000;
@@ -27,7 +33,7 @@ console.log('server started : ' + port);
 
 //Rest API configuration
 app.use(function (req, res, next) {
-  var allowedOrigins = ['http://127.0.0.1:' + port, 'http://localhost:' + port, 'http://soins-infirmiers-dispa.be:' + port];
+  var allowedOrigins = ['http://127.0.0.1:' + port, 'http://localhost:' + port, 'http://lucky-style.be:' + port];
   var origin = req.headers.origin;
   console.log("origin:" + origin);
   if (allowedOrigins.indexOf(origin) > -1) {
@@ -43,9 +49,9 @@ app.use(function (req, res, next) {
 app.post('/sendEmail', function (req, res) {
   var data = {
     from: req.body.from_name + '<' + req.body.from_email + '>',
-    to: config.contactToEmail,
-    cc: config.contactCcEmail,
-    subject: config.contactSubjectEmail,
+    to: process.env.EMAIL_CONTACT,
+    cc: process.env.EMAIL_CC,
+    subject: process.env.EMAIL_SUBJECT,
     text: req.body.content
   };
 

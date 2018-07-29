@@ -1,27 +1,20 @@
 <template>
+
   <div id="app">
     <meta name="viewport" content="width=device-width">
-    <app-header></app-header>
     <navigation-bar></navigation-bar>
-    <div class="page-content">
-      <br>
-      <div id="router-view-container">
-        <router-view></router-view>
-      </div>
-    </div>
     <app-footer></app-footer>
   </div>
 
 
 </template>
 <script>
-  import AppHeader from "./components/app-header";
   import NavigationBar from "./components/navigation-bar";
   import AppFooter from "./components/app-footer";
 
   export default {
     components: {
-      AppHeader, NavigationBar, AppFooter
+      NavigationBar, AppFooter
     },
     name: 'app'
   }
@@ -29,53 +22,62 @@
 
 <style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'GothamRounded-Light', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-bottom: 0px;
     text-align: justify;
-    background-image: url("./assets/wallpaper.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
     line-height: 1.6;
+    color: #353b3f;
   }
 
-  @media screen and (max-width: 400px) {
+  strong {
+    font-family: 'GothamRounded-Bold', sans-serif;
+  }
 
-    #app {
-      background-image: url("./assets/wallpaper-mobile.jpg");
-      background-size: 100%;
-      background-repeat: repeat;
-    }
+  p {
+    font-size: 18px;
+  }
+
+  .justify {
+    text-align: justify;
+    color: #353b3f;
+  }
+
+  .component-content {
+    padding-top: 85px;
+    padding-bottom: 85px;
 
   }
 
-  .page-content {
-    background-color: white;
-    opacity: 0.96;
+  h1 {
+    font-size: 48px !important;
   }
 
-  #router-view-container {
-    margin-top: 8px;
-  }
-
-  a:any-link {
-    color: #28a745;
-  }
-
-  h4 {
-    font-family: 'Bookman';
-    font-size: 200%;
+  h2 {
+    font-size: 42px !important;
+    padding-bottom: 10px !important;
   }
 
   @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 29px !important;
+    }
 
-    #router-view-container {
-      margin-top: 0;
+    h3 {
+      font-size: 23px !important;
+    }
+
+    .component-content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
     }
 
   }
 
+  .col-centered {
+    float: none;
+    margin: 0 auto;
+  }
 </style>

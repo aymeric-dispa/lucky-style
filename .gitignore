@@ -12,6 +12,3 @@ yarn-error.log*
 *.sln
 /src/assets/config.json
 dist/etc/
-/dist/config.json
-/dist/index.html
-/dist/sitemap.xml

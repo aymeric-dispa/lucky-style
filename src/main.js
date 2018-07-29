@@ -7,10 +7,16 @@ import router from './router'
 import Config from '@/assets/config.json';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import VueCarousel from 'vue-carousel';
+import vueSmoothScroll from 'vue-smooth-scroll';
+import icons from 'glyphicons';
 
 
 Vue.use(BootstrapVue);
 Vue.use(VueResource);
+Vue.use(VueCarousel);
+Vue.use(icons);
+Vue.use(vueSmoothScroll)
 Vue.use(VueAnalytics, {
   id: Config.analyticsApiKey,
   router

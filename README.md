@@ -1,6 +1,6 @@
-# Soins Infirmiers Dispa - Vue.js SPA
+# Lucky Style Couvin - Vue.js SPA
 
-> Single Page Application about nursing
+> Single Page Application about pet grooming
 
 ## Build Setup
 
@@ -23,6 +23,4 @@ npm start --prefix dist
 Don't forget to create the config.json files :
 
 - src/assets/config.json - should contain the google analytics API key "analyticsApiKey" (used by [src/main.js](src/main.js))
-- dist/config.json - should contain the mailgun API config (used by [dist/server.js](dist/server.js))
-
 
