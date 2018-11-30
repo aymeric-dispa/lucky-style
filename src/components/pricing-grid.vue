@@ -7,14 +7,15 @@
 
         J'utilise des shampoings haut de gamme Diamex, prévus pour respecter le type de peau et poils de chaque chien.
         <p><br/>
-          Vous ne savez pas vous déplacer?
+          Vous ne savez pas vous déplacer ?
           Je me charge du transport de votre animal gratuitement
           dans un rayon de 5 km. Au delà, un supplément pourra être demandé.
         </p>
         Les tarifs diffèrent en fonction de l'espèce de l'animal, du type de soin à effectuer ainsi que de sa race/taille :
         <ul>
           <li>Mini: York toy, Chihuahua</li>
-          <li>Moyenne race: Bichon, Shih-tzu, Yorkshire, Jack Russel...</li>
+          <li>Petite race: Bichon, Shih-tzu, Yorkshire, Jack Russel...</li>
+          <li>Moyenne race: Cocker, Cavalier King Charles, Schauzer moyen...</li>
           <li>Grande race: Retriever, Bergers, Colley, Border Collie, Husky...</li>
           <li>Très Grande race: Terre Neuve, Bouvier Bernois, Montagne des pyrénées...</li>
         </ul>
