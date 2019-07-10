@@ -121,9 +121,9 @@
   ];
 
   const bath = [
-    {taille: dogSizes.MINI.valueOf(), prix: "25€/h"},
-    {taille: dogSizes.SMALL.valueOf(), prix: "25€/h"},
-    {taille: dogSizes.MEDIUM.valueOf(), prix: "25€/h"},
+    {taille: dogSizes.MINI.valueOf(), prix: "30€/h"},
+    {taille: dogSizes.SMALL.valueOf(), prix: "30€/h"},
+    {taille: dogSizes.MEDIUM.valueOf(), prix: "30€/h"},
     {taille: dogSizes.BIG.valueOf(), prix: "25€ à 65€"},
     {taille: dogSizes.HUGE.valueOf(), prix: "25€ à 75€"}
   ];
@@ -143,7 +143,7 @@
   const other = [
     {"service": "Coupe des ongles à domicile*", prix: "8€"},
     {"service": "Coupe des ongles au salon*", prix: "5€"},
-    {"service": "Chat et autre toilettage", prix: "25€/h"}
+    {"service": "Chat et autre toilettage", prix: "30€/h"}
   ];
 
   const cocker = [
