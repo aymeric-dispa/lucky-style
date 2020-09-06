@@ -69,7 +69,7 @@
     </div>
     <div class="map">
       <iframe
-        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4e94Z4r4wUcRA5oRFLikn1g&key=AIzaSyBm6Wydfk6iDdBsVPDZA2-zC3aTbYjiCEk"
+        :src='mapsApiUrl'
         width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
@@ -78,7 +78,6 @@
 </template>
 <script>
   import * as console from "debug";
-  import icons from 'glyphicons';
   export default {
     name: 'contact-form',
     data () {
@@ -89,8 +88,8 @@
         message: '',
         maxLength: 500,
         formSubmitted: false,
-        messageFailed: false
-
+        messageFailed: false,
+        mapsApiUrl: "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4e94Z4r4wUcRA5oRFLikn1g&key=" + process.env.MAPS_API_KEY
       }
     },
     methods: {

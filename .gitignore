@@ -10,5 +10,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-/src/assets/config.json
+config/prod.env.js
 dist/etc/

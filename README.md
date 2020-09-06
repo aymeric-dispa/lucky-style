@@ -18,9 +18,6 @@ npm run build
 npm run build --report
 
 # run with the contact form REST API
-npm start --prefix dist
+npm start
 ```
-Don't forget to create the config.json files :
-
-- src/assets/config.json - should contain the google analytics API key "analyticsApiKey" (used by [src/main.js](src/main.js))
-
+Don't forget to add the config/prod.env.js file.

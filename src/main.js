@@ -4,7 +4,6 @@ import VueResource from 'vue-resource'
 import VueAnalytics from 'vue-analytics'
 import App from './App'
 import router from './router'
-import Config from '@/assets/config.json';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import VueCarousel from 'vue-carousel';
@@ -18,7 +17,7 @@ Vue.use(VueCarousel);
 Vue.use(icons);
 Vue.use(vueSmoothScroll)
 Vue.use(VueAnalytics, {
-  id: Config.analyticsApiKey,
+  id: process.env.GOOGLE_ANALYTICS_KEY,
   router
 });
 
@@ -31,6 +30,3 @@ new Vue({
   components: {App},
   router
 }).$mount('#app');//mount the router on the app
-
-
-
