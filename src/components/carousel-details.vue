@@ -23,8 +23,7 @@
         <b-carousel-slide class="full-size-slide" id="slide-2">
           <div class="slide-txt" style="text-align: right">
             <h2>Vous ne pouvez pas vous déplacer ? <br/>
-              Le transport de votre animal est gratuit dans un rayon de 5 km</h2>
-            <p>Au delà, un supplément pourra être demandé </p>
+              Le transport de votre animal peut être pris en charge</h2>
           </div>
         </b-carousel-slide>
 

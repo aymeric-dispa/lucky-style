@@ -8,8 +8,7 @@
         J'utilise des shampoings haut de gamme Diamex, prévus pour respecter le type de peau et poils de chaque chien.
         <p><br/>
           Vous ne savez pas vous déplacer ?
-          Je me charge du transport de votre animal gratuitement
-          dans un rayon de 5 km. Au delà, un supplément pourra être demandé.
+          Le transport de votre animal peut être arrangé (des frais supplémentaires seront appliqués).
         </p>
         Les tarifs diffèrent en fonction de l'espèce de l'animal, du type de soin à effectuer ainsi que de sa race/taille :
         <ul>
@@ -33,6 +32,7 @@
             <b-collapse id="accordion1" accordion="my-accordion" role="tabpanel">
               <b-card-body>
                 <b-table striped hover :items="tonte"></b-table>
+              *des frais additionnels équivalents au tarif horaire (35€/h) seront demandés en cas de travail supplémentaire.
               </b-card-body>
             </b-collapse>
           </b-card>
@@ -57,6 +57,7 @@
             <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
               <b-card-body>
                 <b-table striped hover :items="cut"></b-table>
+                *des frais additionnels équivalents au tarif horaire (35€/h) seront demandés en cas de travail supplémentaire.
               </b-card-body>
             </b-collapse>
           </b-card>
@@ -87,7 +88,6 @@
             <b-collapse id="accordion6" accordion="my-accordion" role="tabpanel">
               <b-card-body>
                 <b-table striped hover :items="other"></b-table>
-                *Gratuit pour les clients réguliers.
               </b-card-body>
             </b-collapse>
           </b-card>
@@ -112,43 +112,42 @@
   };
 
   const tonte = [
-    {taille: dogSizes.MINI.valueOf(), prix: "30€"},
-    {taille: dogSizes.SMALL.valueOf(), prix: "35€"},
-    {taille: dogSizes.MEDIUM.valueOf(), prix: "40€"},
-    {taille: dogSizes.BIG.valueOf(), prix: "55€"},
-    {taille: dogSizes.HUGE.valueOf(), prix: "65€"},
-    {taille: dogSizes.COCKER.valueOf(), prix: "45€"},
+    {taille: dogSizes.MINI.valueOf(), prix: "à partir de 32€*"},
+    {taille: dogSizes.SMALL.valueOf(), prix: "à partir de 37€*"},
+    {taille: dogSizes.MEDIUM.valueOf(), prix: "à partir de 42€*"},
+    {taille: dogSizes.BIG.valueOf(), prix: "à partir de 57€*"},
+    {taille: dogSizes.HUGE.valueOf(), prix: "à partir de 67€*"},
+    {taille: dogSizes.COCKER.valueOf(), prix: "à partir de 52€*"},
   ];
 
   const bath = [
-    {taille: dogSizes.MINI.valueOf(), prix: "30€/h"},
-    {taille: dogSizes.SMALL.valueOf(), prix: "30€/h"},
-    {taille: dogSizes.MEDIUM.valueOf(), prix: "30€/h"},
-    {taille: dogSizes.BIG.valueOf(), prix: "25€ à 65€"},
-    {taille: dogSizes.HUGE.valueOf(), prix: "25€ à 75€"}
+    {taille: dogSizes.MINI.valueOf(), prix: "32€/h"},
+    {taille: dogSizes.SMALL.valueOf(), prix: "32€/h"},
+    {taille: dogSizes.MEDIUM.valueOf(), prix: "32€/h"},
+    {taille: dogSizes.BIG.valueOf(), prix: "32€/h"},
+    {taille: dogSizes.HUGE.valueOf(), prix: "35€/h"}
   ];
 
   const cut = [
-    {taille: dogSizes.SMALL.valueOf(), prix: "40€ à 50€"},
-    {taille: dogSizes.MEDIUM.valueOf(), prix: "50€ à 60€"},
-    {taille: dogSizes.BIG.valueOf(), prix: "75€"},
-    {taille: dogSizes.HUGE.valueOf(), prix: "90€"}
+    {taille: dogSizes.SMALL.valueOf(), prix: "de 42€ à 52€ (+ supplément*)"},
+    {taille: dogSizes.MEDIUM.valueOf(), prix: "de 52€ à 62€ (+ supplément*)"},
+    {taille: dogSizes.BIG.valueOf(), prix: "de 77€ (+ supplément*)"},
+    {taille: dogSizes.HUGE.valueOf(), prix: "35€/h"}
   ];
   const trimming = [
-    {taille: dogSizes.SMALL.valueOf(), prix: "40€ à 50€"},
-    {taille: dogSizes.MEDIUM.valueOf(), prix: "50€ à 60€"},
-    {taille: dogSizes.BIG.valueOf(), prix: "75€"},
-    {taille: dogSizes.HUGE.valueOf(), prix: "90€"}
+    {taille: dogSizes.SMALL.valueOf(), prix: "35€/h"},
+    {taille: dogSizes.MEDIUM.valueOf(), prix: "35€/h"},
+    {taille: dogSizes.BIG.valueOf(), prix: "35€/h"},
+    {taille: dogSizes.HUGE.valueOf(), prix: "35€/h"}
   ];
   const other = [
-    {"service": "Coupe des ongles à domicile*", prix: "8€"},
-    {"service": "Coupe des ongles au salon*", prix: "5€"},
-    {"service": "Chat et autre toilettage", prix: "30€/h"}
+    {"service": "Coupe des ongles", prix: "de 5€ à 10€"},
+    {"service": "Chats et autres toilettages", prix: "30€/h"}
   ];
 
   const cocker = [
-    {"type": "Dos trimmer", prix: "40€ à 50€"},
-    {"type": "Dos tondu", prix: "50€ à 60€"}
+    {"type": "Dos trimmer", prix: "62€"},
+    {"type": "Dos tondu", prix: "57€"}
   ];
 
   export default {
